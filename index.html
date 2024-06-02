@@ -19,13 +19,26 @@
         }
 
         .container {
-            width: 400px;
+            width: 600px; /* Increased width */
+            height: 400px; /* Increased height */
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             background-color: #1e1e1e;
             display: flex;
             flex-direction: column;
+            animation: slideIn 1s forwards; /* Added animation */
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .header {
@@ -46,6 +59,7 @@
 
         .features {
             padding: 20px;
+            text-align: center;
         }
 
         .features h2 {
@@ -60,6 +74,16 @@
 
         .features li {
             margin-bottom: 10px;
+        }
+
+        .link {
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+
+        .link:hover {
+            color: #ffd700; /* Change color on hover */
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Product+Sans&display=swap" rel="stylesheet">
@@ -79,6 +103,7 @@
                 <li>Emoji reactions</li>
                 <li>More menu for additional actions</li>
             </ul>
+            <a class="link" href="https://deeply-jewel-button.glitch.me/">Try Now</a> <!-- Added hyperlink -->
         </div>
     </div>
 </body>
